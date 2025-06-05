@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Alien apocalyps</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div id="strtdiv">
+  <button id="strtbtn">START</button>
+</div>
+<audio id="gameovermp3" src="./assets/blast-game-over.mp3"></audio>
+<audio id="livesmp3" src="./assets/live-decr.mp3"></audio>
+<audio id="shootmp3" src="./assets/player-proj-2.mp3"></audio>
+
+<div id="gamediv">
+  <p style="position: absolute; z-index: 10; left: 5px; top: 10px; margin: 0; color: white; user-select:none;">
+    <span>Score:</span><span id="score">0</span>
+  </p>
+  <p style="position: absolute; z-index: 10; right: 5px; top: 10px; margin: 0; color: white; user-select:none;">
+    <span>Lives:</span><span id="lives">3</span>
+  </p>
+  <div id="over">
+    <div><span>GAME OVER</span></div>
+    <div><span>Score:</span><span id="overscore"></span></div>
+    <div><span>HIGHEST:</span><span id="highscore">0</span></div>
+    <div><button id="restartButton">Restart Game</button></div>
+  </div>
+  <canvas id="game" width="1024" height="576"></canvas>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
