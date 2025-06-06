@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Alien apocalyps</title>
-<link rel="stylesheet" href="style.css">
+<title>Responsive Space Shooter Game</title>
 
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="strtdiv">
@@ -16,12 +16,17 @@
 <audio id="shootmp3" src="./assets/player-proj-2.mp3"></audio>
 
 <div id="gamediv">
-  <p style="position: absolute; z-index: 10; left: 5px; top: 10px; margin: 0; color: white; user-select:none;">
+  <div id="score-container">
     <span>Score:</span><span id="score">0</span>
-  </p>
-  <p style="position: absolute; z-index: 10; right: 5px; top: 10px; margin: 0; color: white; user-select:none;">
-    <span>Lives:</span><span id="lives">3</span>
-  </p>
+  </div>
+  <div id="lives-container">
+    <span>Lives:</span>
+    <div id="lives">
+      <img src="./assets/assets.png" alt="Life" />
+      <img src="./assets/assets.png" alt="Life" />
+      <img src="./assets/assets.png" alt="Life" />
+    </div>
+  </div>
   <div id="over">
     <div><span>GAME OVER</span></div>
     <div><span>Score:</span><span id="overscore"></span></div>

@@ -11,7 +11,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Adding padding to prevent sticking directly to edges on wide screens */
     padding: 20px;
     box-sizing: border-box;
   }
@@ -19,56 +18,45 @@
     font-family: gameFont;
     src: url('/assets/SpaceNova-6Rpd1.otf');
   }
-  /* Start screen container */
   #strtdiv {
     background-image: url("./assets/startScreenBackground.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Responsive width and height */
     width: 90vw;
     max-width: 1048px;
     height: 60vh;
     max-height: 576px;
-
-    /* Flex to center button */
     display: flex;
     justify-content: center;
     align-items: center;
-
     border: 4px solid red;
     box-sizing: border-box;
-    border-radius: 8px; /* Optional rounded corners */
+    border-radius: 8px;
   }
-
-  /* Game container */
-#gamediv {
-  position: relative;
-  border: 4px solid red;
-  display: none;
-  max-width: 1048px;
-  width: 90vw;
-  height: auto;
-  max-height: 90vh;
-  box-sizing: border-box;
-  margin: 0 auto; /* center horizontally */
-  overflow: hidden; /* prevent overflow beyond border */
-  border-radius: 8px; /* consistent with design */
-  padding-bottom: 40px;
- 
-}
-
-canvas {
-  display: block; /* remove inline spacing */
-  width: 100%; /* fill container width */
-  max-width: 100%; /* do not exceed container */
-  height: auto; /* keep aspect ratio */
-  background: black;
-  image-rendering: pixelated;
-  border-radius: 4px;
-}
-
-
+  #gamediv {
+    position: relative;
+    border: 4px solid red;
+    display: none;
+    max-width: 1048px;
+    width: 90vw;
+    height: auto;
+    max-height: 90vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    padding-bottom: 40px;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: black;
+    image-rendering: pixelated;
+    border-radius: 4px;
+  }
   button {
     --green: #1BFD9C;
     font-size: 1.2rem;
@@ -118,12 +106,33 @@ canvas {
     box-sizing: border-box;
     border-radius: 4px;
   }
-  #score, #lives {
+  #score-container, #lives-container {
+    position: absolute;
+    top: 10px;
+    color: white;
+    user-select: none;
     font-size: calc(14px + 0.8vw);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: gameFont, sans-serif;
+  }
+  #score-container {
+    left: 5px;
+  }
+  #lives-container {
+    right: 5px;
+  }
+  #lives {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  #lives img {
+    width: 30px;
+    height: auto;
     user-select: none;
   }
-
-  /* Responsive tweaks */
   @media (max-width: 600px) {
     #strtdiv {
       height: 50vh;
@@ -132,6 +141,7 @@ canvas {
       font-size: 1rem;
       padding: 0.5em 2em;
     }
+    #lives img {
+      width: 20px;
+    }
   }
-
-
