@@ -45,6 +45,7 @@
     this.rotation = 0;
     this.opacity = 1;
     this.image = new Image();
+    this.image.src = './assets/spaceship.png';
     this.width = 0;
     this.height = 0;
     this.position = {
@@ -65,7 +66,7 @@
       this.position.y = LOGICAL_HEIGHT - this.height - 40;
       this.ready = true;
     };
-    this.image.src = './assets/spaceship.png';
+    
   }
 
   draw() {
