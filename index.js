@@ -99,7 +99,7 @@
   }
 
   shoot() {
-    const velocity = { x: 0, y: -10 };
+    const velocity = { x: 0, y: -5 };
     if (this.isDoubleFire) {
       projectiles.push(new Projectile({
         position: { x: this.position.x + this.width / 2 - 10, y: this.position.y },
@@ -206,7 +206,7 @@
   class Grid {
     constructor() {
       this.position = {x: 0, y: 0};
-      this.velocity = {x: 10, y: 0};
+      this.velocity = {x: 5, y: 0};
       this.aliens = [];
       const columns = Math.floor(Math.random() * 6 + 5);
       const maxRows = Math.min(4, Math.floor(LOGICAL_HEIGHT / 150));
